@@ -3,7 +3,7 @@
 Contributors: Gabriel Otero, Stephanie Myalik
 
 The objective of this project is to study and use TurboGears for fullstack development in Python.
-Worik with Fullstack Development using python only.
+Work with Fullstack Development using python only.
 
 - Use markdown (.md) files, similar to README.md, for any description of the framework assigned to you.
 
