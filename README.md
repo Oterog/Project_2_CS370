@@ -1,4 +1,17 @@
 # Project_2_CS370
+---
+## Contributors: 
+- **Stephanie Myalik**
+- **Gabriel Otero**
+---
+## Structure:
+- **research**: Contains all the research done on TurboGears
+- **fullstack_project**: Contains the fullstack project and documentation
+--- 
+
+
+
+# Project_2_CS370
 
 Contributors: Gabriel Otero, Stephanie Myalik
 
