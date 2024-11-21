@@ -1,0 +1,71 @@
+name = "project"
+skipFolders = [ "node_modules", ".vscode", "out", "dist", ".vscode-test" ]
+skipFiles = [ ".gitignore", "package.json" ]
+
+[[processes]]
+id = "process1"
+name = "To Do"
+
+  [[processes.tasks]]
+  id = "ihf51n0k7g58nx1hns9wl8zw"
+  title = "resolve sqlalchemy issues, make sure fullstack app begins to function as expected. begin development plan"
+  description = "<p></p>"
+  tag = "backlog"
+  linkFiles = [ ]
+  dueDate = ""
+  checkList = [ ]
+  priority = ""
+  linkCommits = [ ]
+
+[[processes]]
+id = "process2"
+name = "In Progress"
+tasks = [ ]
+
+[[processes]]
+id = "process3"
+name = "Done"
+
+  [[processes.tasks]]
+  id = "c3ahvfvduid3inf9smnjeqbc"
+  title = "init stuff"
+  description = "<p></p>"
+  tag = "backlog"
+  linkFiles = [ ]
+  dueDate = "2024-11-12T05:00:00.000Z"
+  checkList = [ ]
+  priority = ""
+  linkCommits = [ ]
+
+  [[processes.tasks]]
+  id = "mg9maa2jwa5w4gk8fsfu04br"
+  title = "start research, find primary sources"
+  description = "<p></p>"
+  tag = "backlog"
+  linkFiles = [ ]
+  dueDate = "2024-11-18T05:00:00.000Z"
+  checkList = [ ]
+  priority = ""
+  linkCommits = [ ]
+
+  [[processes.tasks]]
+  id = "o06fl8vzc50lzu8cc3csp4cc"
+  title = "start task spreadsheet"
+  description = "<p></p>"
+  tag = "backlog"
+  linkFiles = [ ]
+  dueDate = "2024-11-14T05:00:00.000Z"
+  checkList = [ ]
+  priority = ""
+  linkCommits = [ ]
+
+  [[processes.tasks]]
+  id = "pt4cbt1dwvj0r9x3ag3a2glh"
+  title = "turbogears fullstack init"
+  description = "<p></p>"
+  tag = "backlog"
+  linkFiles = [ ]
+  dueDate = "2024-11-20T05:00:00.000Z"
+  checkList = [ ]
+  priority = ""
+  linkCommits = [ ]
