@@ -63,3 +63,20 @@ then once active, install TurboGears:
 $ pip install TurboGears2
 ```
 
+or
+```BASH
+ pip install tg.devtools
+ ```
+ FOR FULLSTACK!
+
+ ```BASH
+ gearbox quickstart app
+ ```
+
+ ```BASH
+cd app
+```
+
+```BASH
+gearbox serve
+```

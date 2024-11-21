@@ -1,0 +1,60 @@
+# Byte-compiled files and logs
+
+_.py[cod]
+_.log
+
+# C extensions
+
+\*.so
+
+# Environment-specific files
+
+.env
+.venv
+env/
+venv/
+ENV/
+
+# Distribution/build files
+
+_.egg
+_.egg-info/
+dist/
+build/
+
+# SQLite database
+
+_.db
+_.sqlite
+\*.sqlite3
+
+# Generated files by TurboGears
+
+_.ini.bak
+_.cfg.bak
+\*.py.bak
+
+# IDE and editor-specific files
+
+.idea/
+.vscode/
+_.swp
+_~
+
+# Coverage reports
+
+.coverage
+coverage/
+htmlcov/
+
+# Python testing outputs
+
+\*.pytest_cache/
+.tox/
+.nox/
+.cache/
+
+# Static assets built for production (if applicable)
+
+static/_.min._
+static/bundles/
