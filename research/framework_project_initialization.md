@@ -80,3 +80,31 @@ cd app
 ```BASH
 gearbox serve
 ```
+
+
+
+
+### Structure of the application:
+- **Model**: The lowest level of the application, responsible for the data.
+- **View**: The portion responsible for what is displayed/user interface.
+- **Controller**: The portion responsible for the interactions between the Model and View. 
+
+
+### The basic file structure of a TurboGears project is as follows:
+- Config − Where project setup and configuration relies
+- Controllers − All the project controllers, the logic of web application
+- i018n − Translation files for the languages supported
+- Lib − Utility python functions and classes
+- Model − Database models
+- Public Static Files − CSS, JavaScript and images
+- Templates − Templates exposed by our controllers.
+- Tests − The set of Tests done.
+- Websetup − Functions to execute at application setup.
+
+
+
+### The default dependencies installed are:
+Beaker, Genshi, zope.sqlalchemy, sqlalchemy, alembic, repoze.who, tw2.forms, tgext.admin ≥ 0.6.1, WebHelpers2, babel
+
+
+Genshi uses the xhtml formatted templates and is the default template engine for TurboGears.

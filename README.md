@@ -1,25 +1,22 @@
-# Project_2_CS370
+## Project_2_CS370
+
 ---
-## Contributors: 
+
+### Research Topic: TurboGears Fullstack Development
+
+---
+
+### Contributors:
+
 - **Stephanie Myalik**
 - **Gabriel Otero**
+
 ---
-## Structure:
-- **research**: Contains all the research done on TurboGears
-- **fullstack_project**: Contains the fullstack project and documentation
---- 
 
+### Project Structure:
 
+#### research: Contains all the research done on TurboGears
 
-# Project_2_CS370
+#### fullstack_project: Contains the fullstack project and it's documentation
 
-Contributors: Gabriel Otero, Stephanie Myalik
-
-The objective of this project is to study and use TurboGears for fullstack development in Python.
-Work with Fullstack Development using python only.
-
-- Use markdown (.md) files, similar to README.md, for any description of the framework assigned to you.
-
-- Do not put everything in a single (.md) file.
-
-- V.S. Code has extensions for editing markdown files; search for and install them as usual.
+---
