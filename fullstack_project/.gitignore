@@ -1,60 +1,45 @@
-# Byte-compiled files and logs
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
 
-_.py[cod]
-_.log
+# Logs and databases
+*.log
+*.sqlite
+*.db
 
-# C extensions
-
-\*.so
-
-# Environment-specific files
-
+# Environment variables
 .env
-.venv
-env/
+*.ini
+
+# Virtual environment
 venv/
-ENV/
+.env/
 
-# Distribution/build files
-
-_.egg
-_.egg-info/
-dist/
+# Build artifacts
 build/
+dist/
+*.egg-info/
 
-# SQLite database
-
-_.db
-_.sqlite
-\*.sqlite3
-
-# Generated files by TurboGears
-
-_.ini.bak
-_.cfg.bak
-\*.py.bak
-
-# IDE and editor-specific files
-
-.idea/
-.vscode/
-_.swp
-_~
-
-# Coverage reports
-
+# Testing
 .coverage
-coverage/
-htmlcov/
-
-# Python testing outputs
-
-\*.pytest_cache/
 .tox/
-.nox/
-.cache/
+.pytest_cache/
 
-# Static assets built for production (if applicable)
+# Temporary files
+*.swp
+*.swo
+*.bak
+*.tmp
+*~
 
-static/_.min._
-static/bundles/
+# Static assets
+static/css/
+static/js/
+static/img/
+
+# TurboGears specific
+.tgdev/
+.tg_cache/
+.turbogears/
+devdata.db

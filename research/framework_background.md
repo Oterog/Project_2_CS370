@@ -1,41 +1,12 @@
-# Project Research
-
-## Table of Contents
-
-- [What is TurboGears?](#what-is-turbogears)
-
-- [TurboGears History](#turbogears-historytimeline)
-
-- [Turbogears Features](#turbogears-features)
-
-    - [SQLAlchemy](#sqlalchemy)
-
-    - [Pylons](#pylons)
-
-    - [Genshi](#genshi)
-
-    - [Mako](#mako)
-
-- [TurboGears Use Case](#turbogears-use-cases)
-
-    - [Full-Stack Web Development](#full-stack-web-development)
-
-    - [APIs and Microservices](#apis-and-microservices)
-
-    - [Data-Intensive Applications](#data-intensive-applications)
-
-    - [Prototyping and Rapid Development](#prototyping-and-rapid-development)
-
-    - [Real-Time Web Applications](#real-time-web-applications)
-
-    - [Agile Development](#agile-development)
-
+## Framework Background
+---
 ### What is TurboGears?
 
 - TurboGears is a fullstack web application framework for Python that is built on top of several other libraries and tools such as SQLAlchemy, Genshi, and Repoze.
 
 - TurboGears is designed to be a flexible and extensible framework that allows developers to build web applications quickly and easily, while still providing the power and flexibility needed for more complex projects.
 
+---
 ### TurboGears History/Timeline
 
 #### 2005 – Creation of TurboGears
@@ -62,6 +33,8 @@
 
 - However, frameworks like Django, Flask, and newer asynchronous frameworks like FastAPI have become more prominent in the Python web development ecosystem.
 
+---
+
 ### TurboGears Features
 
 #### SQLAlchemy
@@ -80,6 +53,7 @@
 
 - Uses Genshi and Mako which are the two top templating languages in the Python web world today. Mako is more similar to HTML. Using Mako loses its ability to use easily working templates, but A major speed boost is gained by using Mako.
 
+--- 
 ### TurboGears Use Cases
 
 #### Full-Stack Web Development

@@ -26,13 +26,6 @@ $ pip install -e .
 $ gearbox serve
 ```
 
-### References:
-
-1. [TurboGears Documentation](https://www.turbogears.org/)
-2. [TurboGears Minimal Mode](https://turbogears.readthedocs.io/en/latest/turbogears/minimal/index.html)
-3. [TurboGears Fullstack Development](https://turbogears.readthedocs.io/en/latest/turbogears/wiki20.html)
-4. [Fullstack Python](https://www.fullstackpython.com/turbogears.html)
-5. [TurboGears Masterdoc](https://turbogears.readthedocs.io/en/latest/)
 
 
 

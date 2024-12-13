@@ -5,17 +5,7 @@ skipFiles = [ ".gitignore", "package.json" ]
 [[processes]]
 id = "process1"
 name = "To Do"
-
-  [[processes.tasks]]
-  id = "ihf51n0k7g58nx1hns9wl8zw"
-  title = "resolve sqlalchemy issues, make sure fullstack app begins to function as expected. begin development plan"
-  description = "<p></p>"
-  tag = "backlog"
-  linkFiles = [ ]
-  dueDate = ""
-  checkList = [ ]
-  priority = ""
-  linkCommits = [ ]
+tasks = [ ]
 
 [[processes]]
 id = "process2"
@@ -33,6 +23,17 @@ name = "Done"
   tag = "backlog"
   linkFiles = [ ]
   dueDate = "2024-11-12T05:00:00.000Z"
+  checkList = [ ]
+  priority = ""
+  linkCommits = [ ]
+
+  [[processes.tasks]]
+  id = "ihf51n0k7g58nx1hns9wl8zw"
+  title = "resolve sqlalchemy issues, make sure fullstack app begins to function as expected. begin development plan"
+  description = "<p></p>"
+  tag = "backlog"
+  linkFiles = [ ]
+  dueDate = ""
   checkList = [ ]
   priority = ""
   linkCommits = [ ]
@@ -66,6 +67,17 @@ name = "Done"
   tag = "backlog"
   linkFiles = [ ]
   dueDate = "2024-11-20T05:00:00.000Z"
+  checkList = [ ]
+  priority = ""
+  linkCommits = [ ]
+
+  [[processes.tasks]]
+  id = "thshws99cr66nr2wchaykzje"
+  title = "finalize research files"
+  description = ""
+  tag = "backlog"
+  linkFiles = [ ]
+  dueDate = ""
   checkList = [ ]
   priority = ""
   linkCommits = [ ]
