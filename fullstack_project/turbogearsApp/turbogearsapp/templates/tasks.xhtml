@@ -1,91 +1,213 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <p>Debug Tasks: <span tal:content="python:tasks">No tasks</span></p>
     <title>Task Manager</title>
     <style>
       body {
         font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f6f9;
+        color: #333;
       }
+
+      header {
+        background-color: #007bff;
+        color: white;
+        padding: 20px 0;
+        text-align: center;
+      }
+
+      header h1 {
+        margin: 0;
+        font-size: 24px;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
       table {
-        border-collapse: collapse;
         width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
       }
+
       th,
       td {
         border: 1px solid #ddd;
-        padding: 8px;
+        padding: 10px;
         text-align: left;
       }
+
       th {
-        background-color: #f4f4f4;
+        background-color: #f8f9fa;
+        color: #333;
       }
+
       .actions {
         display: flex;
-        gap: 8px;
+        gap: 5px;
+      }
+
+      .actions button {
+        padding: 5px 10px;
+        font-size: 14px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        color: white;
+      }
+
+      .actions .edit {
+        background-color: #ffc107;
+      }
+
+      .actions .edit:hover {
+        background-color: #e0a800;
+      }
+
+      .actions .delete {
+        background-color: #dc3545;
+      }
+
+      .actions .delete:hover {
+        background-color: #c82333;
+      }
+
+      .add-task-form {
+        margin-top: 20px;
+        padding: 15px;
+        background: #f8f9fa;
+        border-radius: 8px;
+      }
+
+      .add-task-form h2 {
+        margin: 0 0 15px;
+        font-size: 20px;
+      }
+
+      .add-task-form label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+
+      .add-task-form input[type="text"] {
+        width: calc(100% - 22px);
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 14px;
+      }
+
+      .add-task-form button {
+        margin-top: 10px;
+        padding: 10px 20px;
+        font-size: 14px;
+        border: none;
+        border-radius: 4px;
+        color: white;
+        background-color: #007bff;
+        cursor: pointer;
+      }
+
+      .add-task-form button:hover {
+        background-color: #0056b3;
       }
     </style>
+    <script type="text/javascript">
+      document.addEventListener("DOMContentLoaded", function () {
+        const editButtons = document.querySelectorAll(".edit-button");
+        editButtons.forEach(function (button) {
+          button.addEventListener("click", function () {
+            const taskId = this.getAttribute("data-task-id");
+            const descriptionSpan = document.getElementById(
+              "description-" + taskId
+            );
+            const editForm = document.getElementById("edit-form-" + taskId);
+
+            if (descriptionSpan.style.display === "none") {
+              descriptionSpan.style.display = "inline";
+              editForm.style.display = "none";
+              this.textContent = "Edit";
+            } else {
+              descriptionSpan.style.display = "none";
+              editForm.style.display = "inline";
+              this.textContent = "Cancel";
+            }
+          });
+        });
+      });
+    </script>
   </head>
   <body>
-    <h1>Task Manager</h1>
-
-    <!-- Display Total Tasks -->
-    <p>Total tasks: <span tal:content="len(tasks)">0</span></p>
-
-    <!-- Task Table -->
-    <table>
-      <thead>
-        <tr>
-          <th>ID</th>
-          <th>Description</th>
-          <th>Actions</th>
-        </tr>
-      </thead>
-      <tbody>
-        <!-- Loop over tasks -->
-        <tr tal:repeat="task tasks">
-          <td tal:content="task['id']"></td>
-          <td tal:content="task['description']"></td>
-          <td class="actions">
-            <!-- Delete Form -->
-            <form method="post" action="/delete_task">
-              <input
-                type="hidden"
-                name="task_id"
-                tal:attributes="value task['id']"
-              />
-              <button type="submit">Delete</button>
-            </form>
-
-            <!-- Edit Form -->
-            <form method="post" action="/edit_task">
-              <input
-                type="hidden"
-                name="task_id"
-                tal:attributes="value task['id']"
-              />
-              <input
-                type="text"
-                name="description"
-                tal:attributes="value task['description']"
-              />
-              <button type="submit">Edit</button>
-            </form>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-
-    <!-- Add New Task Form -->
-    <h2>Add a New Task</h2>
-    <form method="post" action="/add_task">
-      <label for="description">Description:</label>
-      <input
-        type="text"
-        id="description"
-        name="description"
-        placeholder="Enter new task"
-      />
-      <button type="submit">Add Task</button>
-    </form>
+    <header>
+      <h1>Task Manager</h1>
+    </header>
+    <div class="container">
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Description</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr py:for="task in tasks">
+            <td>${task['id']}</td>
+            <td>
+              <span id="description-${task['id']}">${task['description']}</span>
+              <form
+                id="edit-form-${task['id']}"
+                method="post"
+                action="/edit_task"
+                style="display: none"
+              >
+                <input type="hidden" name="task_id" value="${task['id']}" />
+                <input
+                  type="text"
+                  name="description"
+                  value="${task['description']}"
+                  placeholder="Edit task"
+                />
+                <button type="submit" class="save">Save</button>
+              </form>
+            </td>
+            <td class="actions">
+              <button
+                class="edit-button edit"
+                data-task-id="${task['id']}"
+                type="button"
+              >
+                Edit
+              </button>
+              <form method="post" action="/delete_task" style="display: inline">
+                <input type="hidden" name="task_id" value="${task['id']}" />
+                <button class="delete" type="submit">Delete</button>
+              </form>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="add-task-form">
+        <h2>Add a New Task</h2>
+        <form method="post" action="/add_task">
+          <label for="description">Task Description:</label>
+          <input
+            type="text"
+            id="description"
+            name="description"
+            placeholder="Enter a new task"
+          />
+          <button type="submit">Add Task</button>
+        </form>
+      </div>
+    </div>
   </body>
 </html>

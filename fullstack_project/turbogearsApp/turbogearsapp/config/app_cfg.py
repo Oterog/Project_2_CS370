@@ -24,13 +24,11 @@ base_config.update_blueprint({
 
 # Rendering Engines Configuration
 rendering_config = {
-    'renderers': ['kajiki'],  # Enable Kajiki for XHTML templates
+    'renderers': ['kajiki'],  # Use Kajiki for XHTML templates
     'default_renderer': 'kajiki',
+    'templating.kajiki.strip_text': False,  # Avoid whitespace stripping
 }
 base_config.update_blueprint(rendering_config)
-
-base_config.update_blueprint(rendering_config)
-
 
 # Configure Sessions, store data as JSON to avoid pickle security issues
 base_config.update_blueprint({

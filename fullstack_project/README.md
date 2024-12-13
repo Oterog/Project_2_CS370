@@ -20,7 +20,12 @@
     ```bash
     pip install "sqlalchemy<2.0"
     ```
+- Set the database:
+    ```bash
+    gearbox setup-app
+    ```
 - Serve the project:
     ```bash
     gearbox serve
     ```
+You should now be able to view the app at http://localhost:8080
