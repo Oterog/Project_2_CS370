@@ -1,0 +1,91 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <p>Debug Tasks: <span tal:content="python:tasks">No tasks</span></p>
+    <title>Task Manager</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+      }
+      th {
+        background-color: #f4f4f4;
+      }
+      .actions {
+        display: flex;
+        gap: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Task Manager</h1>
+
+    <!-- Display Total Tasks -->
+    <p>Total tasks: <span tal:content="len(tasks)">0</span></p>
+
+    <!-- Task Table -->
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Description</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Loop over tasks -->
+        <tr tal:repeat="task tasks">
+          <td tal:content="task['id']"></td>
+          <td tal:content="task['description']"></td>
+          <td class="actions">
+            <!-- Delete Form -->
+            <form method="post" action="/delete_task">
+              <input
+                type="hidden"
+                name="task_id"
+                tal:attributes="value task['id']"
+              />
+              <button type="submit">Delete</button>
+            </form>
+
+            <!-- Edit Form -->
+            <form method="post" action="/edit_task">
+              <input
+                type="hidden"
+                name="task_id"
+                tal:attributes="value task['id']"
+              />
+              <input
+                type="text"
+                name="description"
+                tal:attributes="value task['description']"
+              />
+              <button type="submit">Edit</button>
+            </form>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Add New Task Form -->
+    <h2>Add a New Task</h2>
+    <form method="post" action="/add_task">
+      <label for="description">Description:</label>
+      <input
+        type="text"
+        id="description"
+        name="description"
+        placeholder="Enter new task"
+      />
+      <button type="submit">Add Task</button>
+    </form>
+  </body>
+</html>
