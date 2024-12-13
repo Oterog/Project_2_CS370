@@ -1,0 +1,45 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Logs and databases
+*.log
+*.sqlite
+*.db
+
+# Environment variables
+.env
+*.ini
+
+# Virtual environment
+venv/
+.env/
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+
+# Testing
+.coverage
+.tox/
+.pytest_cache/
+
+# Temporary files
+*.swp
+*.swo
+*.bak
+*.tmp
+*~
+
+# Static assets
+static/css/
+static/js/
+static/img/
+
+# TurboGears specific
+.tgdev/
+.tg_cache/
+.turbogears/
+devdata.db
