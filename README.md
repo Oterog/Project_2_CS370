@@ -21,7 +21,7 @@ This project includes research and the development of a web application using th
 
 - **fullstack_project**
     - turbogearsApp - The TurboGears project
-    - setup.md - Instructions on setting up the project
+    - README.md - Instructions on setting up the project
 
 ---
 
